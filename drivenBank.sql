@@ -59,7 +59,7 @@ CREATE TABLE "transactions" (
 	id serial NOT NULL PRIMARY KEY,
   	"bankAccountId" integer NOT NULL REFERENCES "bankAccount"(id),
     amount text NOT NULL,
-    type text NOT NULL
+    type transactions NOT NULL,
   	time time NOT NULL,
 	description text,
   	cancelled boolean NOT NULL DEFAULT false
