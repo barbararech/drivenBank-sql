@@ -35,7 +35,7 @@ CREATE TABLE "cities" (
 --Create customerAddresses table
 CREATE TABLE "customerAddresses" (
 	id serial NOT NULL PRIMARY KEY,
-  	"customerId" integer NOT NULL REFERENCES customers(id),
+  	"customerId" integer NOT NULL REFERENCES customers(id) UNIQUE,
   	street text NOT NULL,
 	number integer NOT NULL,
   	complement text,
